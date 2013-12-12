@@ -1,0 +1,17 @@
+.bundle/
+log/*.log
+pkg/
+*.gem
+*.rbc
+.bundle
+.config
+.yardoc
+Gemfile.lock
+InstalledFiles
+_yardoc
+coverage
+doc/
+lib/bundler/man
+rdoc
+tmp
+test/dummy/log/*.log
