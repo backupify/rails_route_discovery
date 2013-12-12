@@ -18,8 +18,9 @@ class RailsRouteDiscovery::RoutesJSONFormatter
 
   def section(routes)
     routes.each do |route|
+      next if (name = route.delete(:name)).blank?
       route.delete(:reqs)
-      @routes[route.delete(:name)] = route
+      @routes[name] = route
     end
   end
 
