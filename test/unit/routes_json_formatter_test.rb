@@ -50,6 +50,12 @@ class RoutesJSONFormatterTest < ActiveSupport::TestCase
       assert_equal '{"root":{"path":"bad_example"}}', @formatter.result
     end
 
+    should 'skip routes with blank names' do
+      @formatter.section([{:name => '', :reqs => [], :path => 'bad_example'}])
+
+      assert_equal '{}', @formatter.result
+    end
+
   end
 
   context '#section_title' do
