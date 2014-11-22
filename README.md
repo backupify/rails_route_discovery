@@ -21,7 +21,7 @@ Or install it yourself as:
 In your config/routes.rb, either mount the rails_route_discovery engine to your
 prefered path or use a scope with the module option to mount the discovery
 controller directly:
-```
+```ruby
 # config/routes.rb
 
 Rails.application.routes.draw do
@@ -40,7 +40,7 @@ end
 Alternatively, you can create a new controller that inherits from
 RailsRouteDiscovery::DiscoveryController to further customize behavior and
 routing options:
-```
+```ruby
 class CustomDiscoveryController < RailsRouteDiscovery::DiscoveryController
 
   def index
